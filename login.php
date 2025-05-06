@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // searches for all users with the username
-        $stmt = $db->prepare("SELECT * FROM users WHERE username = :username)");
+        $stmt = $db->prepare("SELECT * FROM users WHERE username = :username");
         
         // binds given username to username parameter
         $stmt->bindParam(':username', $username);
@@ -24,8 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             echo 'Login successful.';
-        } else {
-            echo 'Invalid username or password';
         }
     } catch (PDOException $error) {
         echo 'Login Error: ' . $error->getMessage();
@@ -59,12 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h2>Log-in</h2>
                 <p>Don't have an account?&nbsp;<a href="register.php">Register Now</a></p>
                 <form id="lForm" method="POST" action="login.php">
-                    <input type="text" name="username" class="inputs" placeholder="username" required> <br>
-                    <input type="text" name="password" placeholder="password" class="inputs" required> <br>
+                    <input type="text" name="username" id="username" placeholder="username" class="inputs"> <br>
+                    <input type="text" name="password" id="password" placeholder="password" class="inputs"> <br>
                     <div class="logErrors"></div><br>
                     <input type="submit" name="submit" id="submit" value="Login">
                 </form>
             </div>
         </div>
+        <script src="scripts/log-script.js"></script>
     </body>
 </html>

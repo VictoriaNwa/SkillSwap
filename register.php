@@ -55,15 +55,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h2>Register Your Account</h2>
                 <p>Already have an account?&nbsp;<a href="login.php">Log-In</a></p>
                 <form id="rForm" method="POST" action="register.php">
-                        <input type="text" name="username" class="inputs" placeholder="username" required><br>
-                        <input type="text" name="email" placeholder="email" class="inputs" required><br>
-                        <input type="text" name="phonenum" placeholder="phone number" class="inputs" required><br>
-                        <input type="text" name="password" placeholder="password" class="inputs" required><br>
+                        <input type="text" name="username" id="username" placeholder="username" class="inputs" ><br>
+                        <input type="text" name="email" id="email" placeholder="email" class="inputs" ><br>
+                        <input type="text" name="phone_number" id="phone_number" placeholder="phone number" class="inputs" ><br>
+                        <input type="text" name="password" id="password" placeholder="password" class="inputs" ><br>
                         <div class="regErrors"></div><br>
                         <input type="submit" name="submit" id="submit" value="Register">
                 </form>
             </div>
         </div>
-        <script src="scripts/script.js"></script>
+        <script src="scripts/reg-script.js"></script>
     </body>
 </html>
