@@ -76,16 +76,15 @@ p {
 .inputs {
     width: 28vw;
     height: 5vh;
-    border: 3px solid rgb(23, 40, 40);;
+    border: 3px solid rgb(23, 40, 40);
     border-radius: 5px;
     margin-bottom: 3px;
     box-sizing: border-box;
     padding: 3%;
 }
-.reg {
-    display: flex;
-    align-items: flex-end;
-}
 .regErrors, .logErrors {
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    color: rgb(23, 40, 40);
+    margin-top: 1%;
 }
