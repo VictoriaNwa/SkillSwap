@@ -7,9 +7,9 @@ try {
     // creates users table
     $db->exec("CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
-    username TEXT UNIQUE
-    email TEXT UNIQUE
-    phone_number TEXT UNIQUE
+    username TEXT UNIQUE,
+    email TEXT UNIQUE,
+    phone_number TEXT UNIQUE,
     password TEXT
     )");
 
